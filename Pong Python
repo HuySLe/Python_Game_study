@@ -1,0 +1,46 @@
+From copyassignment
+# Import the turtle library
+import turtle
+
+# Creating the screen with name and size
+screen = turtle.Screen()
+screen.title("Python Pong game by copyassignment.com ")
+screen.setup(width=1000 , height=600)
+
+# Creating the left paddle
+paddle1 = turtle.Turtle()
+#Setting its speed as zero, it moves only when key is pressed
+paddle1.speed(0)
+#Setting shape, color, and size
+paddle1.shape("square")
+paddle1.color("blue")
+paddle1.shapesize(stretch_wid=6, stretch_len=2)
+paddle1.penup()
+#The paddle is left-centered initially
+paddle1.goto(-400, 0)
+
+# Creating the right paddle
+paddle2 = turtle.Turtle()
+#Setting its speed as zero, it moves only when key is pressed
+paddle2.speed(0)
+#Setting shape, color, and size
+paddle2.shape("square")
+paddle2.color("red")
+paddle2.shapesize(stretch_wid=6, stretch_len=2)
+paddle2.penup()
+#The paddle is right-centered initially
+paddle2.goto(400, 0)
+
+# Ball of circle shape
+ball = turtle.Turtle()
+#Setting the speed of ball to 0, it moves based on the dx and dy values
+ball.speed(0)
+#Setting shape, color, and size
+ball.shape("circle")
+ball.color("green")
+ball.penup()
+#Ball starts from the centre of the screen
+ball.goto(0, 0)
+#Setting dx and dy that decide the speed of the ball
+ball.dx = 2
+ball.dy = -2
